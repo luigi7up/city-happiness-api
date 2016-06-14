@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails city-happiness-api: development" uuid="513e8461-b9f7-443a-8e84-f7d8b803b004">
+    <database-info product="PostgreSQL" version="9.5.0" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.5">
+      <database id="1" name="city-happiness-api_development"/>
+      <schema id="2" parent="1" name="public">
+        <object-id>2200</object-id>
+        <comment>standard public schema</comment>
+        <introspection-timestamp>2016-06-11.00:11:37.044</introspection-timestamp>
+      </schema>
+      <schema id="3" parent="1" name="pg_catalog">
+        <object-id>11</object-id>
+        <comment>system catalog schema</comment>
+      </schema>
+      <schema id="4" parent="1" name="pg_toast">
+        <object-id>99</object-id>
+        <comment>reserved schema for TOAST tables</comment>
+      </schema>
+      <schema id="5" parent="1" name="information_schema">
+        <object-id>12349</object-id>
+      </schema>
+      <schema id="6" parent="1" name="topology">
+        <object-id>554849</object-id>
+      </schema>
+      <schema id="7" parent="1" name="pg_toast_temp_1">
+        <object-id>11817</object-id>
+      </schema>
+      <schema id="8" parent="1" name="pg_temp_1">
+        <object-id>11816</object-id>
+      </schema>
+      <sequence id="9" parent="2" name="happinesses_id_seq">
+        <object-id>555014</object-id>
+        <state-number>44773</state-number>
+      </sequence>
+      <object-type id="10" parent="2" name="geometry_dump">
+        <object-id>553760</object-id>
+        <state-number>44762</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="11" parent="2" name="valid_detail">
+        <object-id>553866</object-id>
+        <state-number>44762</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="12" parent="2" name="rastbandarg">
+        <object-id>554268</object-id>
+        <state-number>44762</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="13" parent="2" name="geomval">
+        <object-id>554271</object-id>
+        <state-number>44762</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="14" parent="2" name="addbandarg">
+        <object-id>554298</object-id>
+        <state-number>44762</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="15" parent="2" name="summarystats">
+        <object-id>554311</object-id>
+        <state-number>44762</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="16" parent="2" name="agg_count">
+        <object-id>554342</object-id>
+        <state-number>44762</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="17" parent="2" name="reclassarg">
+        <object-id>554442</object-id>
+        <state-number>44762</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="18" parent="2" name="agg_samealignment">
+        <object-id>554683</object-id>
+        <state-number>44762</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="19" parent="2" name="unionarg">
+        <object-id>554738</object-id>
+        <state-number>44762</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <table id="20" parent="2" name="ar_internal_metadata">
+        <object-id>555006</object-id>
+        <state-number>44772</state-number>
+      </table>
+      <table id="21" parent="2" name="happinesses">
+        <object-id>555016</object-id>
+        <state-number>44773</state-number>
+      </table>
+      <table id="22" parent="2" name="schema_migrations">
+        <object-id>554998</object-id>
+        <state-number>44771</state-number>
+      </table>
+      <table id="23" parent="2" name="spatial_ref_sys">
+        <object-id>553765</object-id>
+        <state-number>44762</state-number>
+      </table>
+      <view id="24" parent="2" name="geography_columns">
+        <object-id>554099</object-id>
+        <state-number>44762</state-number>
+      </view>
+      <view id="25" parent="2" name="geometry_columns">
+        <object-id>554218</object-id>
+        <state-number>44762</state-number>
+      </view>
+      <view id="26" parent="2" name="raster_columns">
+        <object-id>554815</object-id>
+        <state-number>44762</state-number>
+      </view>
+      <view id="27" parent="2" name="raster_overviews">
+        <object-id>554824</object-id>
+        <state-number>44762</state-number>
+      </view>
+      <table id="28" parent="3" name="pg_aggregate">
+        <object-id>2600</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="29" parent="3" name="pg_am">
+        <object-id>2601</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="30" parent="3" name="pg_amop">
+        <object-id>2602</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="31" parent="3" name="pg_amproc">
+        <object-id>2603</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="32" parent="3" name="pg_attrdef">
+        <object-id>2604</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="33" parent="3" name="pg_attribute">
+        <object-id>1249</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="34" parent="3" name="pg_auth_members">
+        <object-id>1261</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="35" parent="3" name="pg_authid">
+        <object-id>1260</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="36" parent="3" name="pg_cast">
+        <object-id>2605</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="37" parent="3" name="pg_class">
+        <object-id>1259</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="38" parent="3" name="pg_collation">
+        <object-id>3456</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="39" parent="3" name="pg_constraint">
+        <object-id>2606</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="40" parent="3" name="pg_conversion">
+        <object-id>2607</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="41" parent="3" name="pg_database">
+        <object-id>1262</object-id>
+        <state-number>996</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="42" parent="3" name="pg_db_role_setting">
+        <object-id>2964</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="43" parent="3" name="pg_default_acl">
+        <object-id>826</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="44" parent="3" name="pg_depend">
+        <object-id>2608</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="45" parent="3" name="pg_description">
+        <object-id>2609</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="46" parent="3" name="pg_enum">
+        <object-id>3501</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="47" parent="3" name="pg_event_trigger">
+        <object-id>3466</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="48" parent="3" name="pg_extension">
+        <object-id>3079</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="49" parent="3" name="pg_foreign_data_wrapper">
+        <object-id>2328</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="50" parent="3" name="pg_foreign_server">
+        <object-id>1417</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="51" parent="3" name="pg_foreign_table">
+        <object-id>3118</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="52" parent="3" name="pg_index">
+        <object-id>2610</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="53" parent="3" name="pg_inherits">
+        <object-id>2611</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="54" parent="3" name="pg_language">
+        <object-id>2612</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="55" parent="3" name="pg_largeobject">
+        <object-id>2613</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="56" parent="3" name="pg_largeobject_metadata">
+        <object-id>2995</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="57" parent="3" name="pg_namespace">
+        <object-id>2615</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="58" parent="3" name="pg_opclass">
+        <object-id>2616</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="59" parent="3" name="pg_operator">
+        <object-id>2617</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="60" parent="3" name="pg_opfamily">
+        <object-id>2753</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="61" parent="3" name="pg_pltemplate">
+        <object-id>1136</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="62" parent="3" name="pg_proc">
+        <object-id>1255</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="63" parent="3" name="pg_range">
+        <object-id>3541</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="64" parent="3" name="pg_rewrite">
+        <object-id>2618</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="65" parent="3" name="pg_seclabel">
+        <object-id>3596</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="66" parent="3" name="pg_shdepend">
+        <object-id>1214</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="67" parent="3" name="pg_shdescription">
+        <object-id>2396</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="68" parent="3" name="pg_shseclabel">
+        <object-id>3592</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="69" parent="3" name="pg_statistic">
+        <object-id>2619</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="70" parent="3" name="pg_tablespace">
+        <object-id>1213</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="71" parent="3" name="pg_trigger">
+        <object-id>2620</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="72" parent="3" name="pg_ts_config">
+        <object-id>3602</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="73" parent="3" name="pg_ts_config_map">
+        <object-id>3603</object-id>
+        <state-number>2</state-number>
+      </table>
+      <table id="74" parent="3" name="pg_ts_dict">
+        <object-id>3600</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="75" parent="3" name="pg_ts_parser">
+        <object-id>3601</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="76" parent="3" name="pg_ts_template">
+        <object-id>3764</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="77" parent="3" name="pg_type">
+        <object-id>1247</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <table id="78" parent="3" name="pg_user_mapping">
+        <object-id>1418</object-id>
+        <state-number>2</state-number>
+        <with-oids>1</with-oids>
+      </table>
+      <view id="79" parent="3" name="pg_available_extension_versions">
+        <object-id>11099</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="80" parent="3" name="pg_available_extensions">
+        <object-id>11096</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="81" parent="3" name="pg_cursors">
+        <object-id>11093</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="82" parent="3" name="pg_group">
+        <object-id>11060</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="83" parent="3" name="pg_indexes">
+        <object-id>11082</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="84" parent="3" name="pg_locks">
+        <object-id>11090</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="85" parent="3" name="pg_matviews">
+        <object-id>11078</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="86" parent="3" name="pg_prepared_statements">
+        <object-id>11106</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="87" parent="3" name="pg_prepared_xacts">
+        <object-id>11102</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="88" parent="3" name="pg_roles">
+        <object-id>11054</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="89" parent="3" name="pg_rules">
+        <object-id>11066</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="90" parent="3" name="pg_seclabels">
+        <object-id>11109</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="91" parent="3" name="pg_settings">
+        <object-id>11113</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="92" parent="3" name="pg_shadow">
+        <object-id>11057</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="93" parent="3" name="pg_stat_activity">
+        <object-id>11186</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="94" parent="3" name="pg_stat_all_indexes">
+        <object-id>11156</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="95" parent="3" name="pg_stat_all_tables">
+        <object-id>11124</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="96" parent="3" name="pg_stat_bgwriter">
+        <object-id>11206</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="97" parent="3" name="pg_stat_database">
+        <object-id>11192</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="98" parent="3" name="pg_stat_database_conflicts">
+        <object-id>11195</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="99" parent="3" name="pg_stat_replication">
+        <object-id>11189</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="100" parent="3" name="pg_stat_sys_indexes">
+        <object-id>11160</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="101" parent="3" name="pg_stat_sys_tables">
+        <object-id>11132</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="102" parent="3" name="pg_stat_user_functions">
+        <object-id>11198</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="103" parent="3" name="pg_stat_user_indexes">
+        <object-id>11163</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="104" parent="3" name="pg_stat_user_tables">
+        <object-id>11139</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="105" parent="3" name="pg_stat_xact_all_tables">
+        <object-id>11128</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="106" parent="3" name="pg_stat_xact_sys_tables">
+        <object-id>11136</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="107" parent="3" name="pg_stat_xact_user_functions">
+        <object-id>11202</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="108" parent="3" name="pg_stat_xact_user_tables">
+        <object-id>11143</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="109" parent="3" name="pg_statio_all_indexes">
+        <object-id>11166</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="110" parent="3" name="pg_statio_all_sequences">
+        <object-id>11176</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="111" parent="3" name="pg_statio_all_tables">
+        <object-id>11146</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="112" parent="3" name="pg_statio_sys_indexes">
+        <object-id>11170</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="113" parent="3" name="pg_statio_sys_sequences">
+        <object-id>11180</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="114" parent="3" name="pg_statio_sys_tables">
+        <object-id>11150</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="115" parent="3" name="pg_statio_user_indexes">
+        <object-id>11173</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="116" parent="3" name="pg_statio_user_sequences">
+        <object-id>11183</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="117" parent="3" name="pg_statio_user_tables">
+        <object-id>11153</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="118" parent="3" name="pg_stats">
+        <object-id>11086</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="119" parent="3" name="pg_tables">
+        <object-id>11074</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="120" parent="3" name="pg_timezone_abbrevs">
+        <object-id>11118</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="121" parent="3" name="pg_timezone_names">
+        <object-id>11121</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="122" parent="3" name="pg_user">
+        <object-id>11063</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="123" parent="3" name="pg_user_mappings">
+        <object-id>11209</object-id>
+        <state-number>2</state-number>
+      </view>
+      <view id="124" parent="3" name="pg_views">
+        <object-id>11070</object-id>
+        <state-number>2</state-number>
+      </view>
+    </database-model>
+  </data-source>
+  <data-source name="Rails city-happiness-api: test" uuid="cb70bbd1-9138-4584-a837-04474d597753">
+    <database-info product="PostgreSQL" version="9.5.0" jdbc-version="4.0" driver-name="PostgreSQL Native Driver" driver-version="PostgreSQL 9.3 JDBC4 (build 1100)">
+      <identifier-quote-string>&quot;</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact"/>
+    <database-model serializer="dbm" rdbms="POSTGRES" format-version="2.5">
+      <database id="1" name="city-happiness-api_test"/>
+      <schema id="2" parent="1" name="public">
+        <object-id>2200</object-id>
+        <comment>standard public schema</comment>
+        <introspection-timestamp>2016-06-11.00:11:37.040</introspection-timestamp>
+      </schema>
+      <sequence id="3" parent="2" name="happinesses_id_seq">
+        <object-id>556532</object-id>
+        <state-number>44779</state-number>
+      </sequence>
+      <object-type id="4" parent="2" name="geometry_dump">
+        <object-id>555311</object-id>
+        <state-number>44777</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="5" parent="2" name="valid_detail">
+        <object-id>555417</object-id>
+        <state-number>44777</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="6" parent="2" name="rastbandarg">
+        <object-id>555819</object-id>
+        <state-number>44777</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="7" parent="2" name="geomval">
+        <object-id>555822</object-id>
+        <state-number>44777</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="8" parent="2" name="addbandarg">
+        <object-id>555849</object-id>
+        <state-number>44777</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="9" parent="2" name="summarystats">
+        <object-id>555862</object-id>
+        <state-number>44777</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="10" parent="2" name="agg_count">
+        <object-id>555893</object-id>
+        <state-number>44777</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="11" parent="2" name="reclassarg">
+        <object-id>555993</object-id>
+        <state-number>44777</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="12" parent="2" name="agg_samealignment">
+        <object-id>556234</object-id>
+        <state-number>44777</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <object-type id="13" parent="2" name="unionarg">
+        <object-id>556289</object-id>
+        <state-number>44777</state-number>
+        <sub-kind>COMPOSITE</sub-kind>
+        <sub-category>COMPOSITE</sub-category>
+      </object-type>
+      <table id="14" parent="2" name="happinesses">
+        <object-id>556534</object-id>
+        <state-number>44779</state-number>
+      </table>
+      <table id="15" parent="2" name="spatial_ref_sys">
+        <object-id>555316</object-id>
+        <state-number>44777</state-number>
+      </table>
+      <view id="16" parent="2" name="geography_columns">
+        <object-id>555650</object-id>
+        <state-number>44777</state-number>
+      </view>
+      <view id="17" parent="2" name="geometry_columns">
+        <object-id>555769</object-id>
+        <state-number>44777</state-number>
+      </view>
+      <view id="18" parent="2" name="raster_columns">
+        <object-id>556366</object-id>
+        <state-number>44777</state-number>
+      </view>
+      <view id="19" parent="2" name="raster_overviews">
+        <object-id>556375</object-id>
+        <state-number>44777</state-number>
+      </view>
+    </database-model>
+  </data-source>
+  <data-source name="Rails city-happiness-api: production" uuid="4127c048-8fdb-4223-9dd5-a03fd12fd567">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
