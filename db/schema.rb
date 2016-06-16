@@ -11,22 +11,28 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160611083906) do
+ActiveRecord::Schema.define(version: 20160616091133) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "postgis"
   enable_extension "postgis_topology"
 
+  create_table "api_keys", force: :cascade do |t|
+    t.string   "access_token"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
   create_table "happinesses", force: :cascade do |t|
-    t.integer  "device_id"
+    t.string   "device_id"
     t.integer  "feeling_like"
     t.float    "lat"
     t.float    "lng"
     t.string   "city"
     t.string   "country"
     t.string   "neighborhood"
-    t.string   "string"
+    t.string   "postal_code"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

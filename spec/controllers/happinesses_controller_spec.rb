@@ -18,7 +18,7 @@ require 'rails_helper'
 # Message expectations are only used when there is no simpler way to specify
 # that an instance is receiving a specific message.
 
-RSpec.describe HappinessesController, :type => :controller do
+RSpec.describe Api::V1::HappinessesController, :type => :controller do
 
   # This should return the minimal set of attributes required to create a valid
   # Happiness. As you add validations to Happiness, be sure to
@@ -44,116 +44,36 @@ RSpec.describe HappinessesController, :type => :controller do
     end
   end
 
-  describe "GET show" do
-    it "assigns the requested happiness as @happiness" do
-      happiness = Happiness.create! valid_attributes
-      get :show, {:id => happiness.to_param}, valid_session
-      expect(assigns(:happiness)).to eq(happiness)
-    end
-  end
-
-  describe "GET new" do
-    it "assigns a new happiness as @happiness" do
-      get :new, {}, valid_session
-      expect(assigns(:happiness)).to be_a_new(Happiness)
-    end
-  end
-
-  describe "GET edit" do
-    it "assigns the requested happiness as @happiness" do
-      happiness = Happiness.create! valid_attributes
-      get :edit, {:id => happiness.to_param}, valid_session
-      expect(assigns(:happiness)).to eq(happiness)
-    end
-  end
-
   describe "POST create" do
     describe "with valid params" do
       it "creates a new Happiness" do
         expect {
-          post :create, {:happiness => valid_attributes}, valid_session
+          post :create, {:happinesses => valid_attributes}, valid_session
         }.to change(Happiness, :count).by(1)
       end
 
       it "assigns a newly created happiness as @happiness" do
-        post :create, {:happiness => valid_attributes}, valid_session
-        expect(assigns(:happiness)).to be_a(Happiness)
-        expect(assigns(:happiness)).to be_persisted
+        post :create, {:happinesses => valid_attributes}, valid_session
+        expect(assigns(:happinesses)).to be_a(Happiness)
+        expect(assigns(:happinesses)).to be_persisted
       end
 
       it "redirects to the created happiness" do
-        post :create, {:happiness => valid_attributes}, valid_session
+        post :create, {:happinesses => valid_attributes}, valid_session
         expect(response).to redirect_to(Happiness.last)
       end
     end
 
     describe "with invalid params" do
       it "assigns a newly created but unsaved happiness as @happiness" do
-        post :create, {:happiness => invalid_attributes}, valid_session
-        expect(assigns(:happiness)).to be_a_new(Happiness)
+        post :create, {:happinesses => invalid_attributes}, valid_session
+        expect(assigns(:happinesses)).to be_a_new(Happiness)
       end
 
       it "re-renders the 'new' template" do
-        post :create, {:happiness => invalid_attributes}, valid_session
+        post :create, {:happinesses => invalid_attributes}, valid_session
         expect(response).to render_template("new")
       end
     end
   end
-
-  describe "PUT update" do
-    describe "with valid params" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
-
-      it "updates the requested happiness" do
-        happiness = Happiness.create! valid_attributes
-        put :update, {:id => happiness.to_param, :happiness => new_attributes}, valid_session
-        happiness.reload
-        skip("Add assertions for updated state")
-      end
-
-      it "assigns the requested happiness as @happiness" do
-        happiness = Happiness.create! valid_attributes
-        put :update, {:id => happiness.to_param, :happiness => valid_attributes}, valid_session
-        expect(assigns(:happiness)).to eq(happiness)
-      end
-
-      it "redirects to the happiness" do
-        happiness = Happiness.create! valid_attributes
-        put :update, {:id => happiness.to_param, :happiness => valid_attributes}, valid_session
-        expect(response).to redirect_to(happiness)
-      end
-    end
-
-    describe "with invalid params" do
-      it "assigns the happiness as @happiness" do
-        happiness = Happiness.create! valid_attributes
-        put :update, {:id => happiness.to_param, :happiness => invalid_attributes}, valid_session
-        expect(assigns(:happiness)).to eq(happiness)
-      end
-
-      it "re-renders the 'edit' template" do
-        happiness = Happiness.create! valid_attributes
-        put :update, {:id => happiness.to_param, :happiness => invalid_attributes}, valid_session
-        expect(response).to render_template("edit")
-      end
-    end
-  end
-
-  describe "DELETE destroy" do
-    it "destroys the requested happiness" do
-      happiness = Happiness.create! valid_attributes
-      expect {
-        delete :destroy, {:id => happiness.to_param}, valid_session
-      }.to change(Happiness, :count).by(-1)
-    end
-
-    it "redirects to the happinesses list" do
-      happiness = Happiness.create! valid_attributes
-      delete :destroy, {:id => happiness.to_param}, valid_session
-      expect(response).to redirect_to(happinesses_url)
-    end
-  end
-
 end

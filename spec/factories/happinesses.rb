@@ -1,5 +1,5 @@
 FactoryGirl.define do
-  factory :happiness do
+  factory :happinesses do
     device_id ""
     feeling_like ""
     lat ""
