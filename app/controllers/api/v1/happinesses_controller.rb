@@ -4,7 +4,12 @@ module Api::V1
 
     # GET /happinesses
     def index
-      @happinesses = Happiness.all
+
+      if params[:location].present?
+        @happinesses = Happiness.near_happynesses params[:location], params[:distance] || 15
+      else
+        @happinesses = Happiness.all
+      end
 
       render json: @happinesses
     end
@@ -27,6 +32,10 @@ module Api::V1
 
     def top_happiest_cities
       render json: Happiness.top_happiest_cities
+    end
+
+    def happiest_in_distance
+      render json: Happiness.happy_by_distance(params[:distance] || 0)
     end
 
     private

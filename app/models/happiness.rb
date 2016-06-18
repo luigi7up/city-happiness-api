@@ -2,6 +2,13 @@ class Happiness < ApplicationRecord
 
   validates :device_id, :feeling_like, :lat, :lng, presence: true
 
+  validate :happiness_set
+  def happiness_set
+    if Happiness.where(device_id: device_id).where("created_at >= ?", Time.zone.now.beginning_of_day).count > 0
+        errors.add(:base, "Happiness was set already today")
+    end
+  end
+
   reverse_geocoded_by :lat, :lng do |obj, results|
     if geo = results.first
       obj.city    = geo.city
@@ -16,13 +23,12 @@ class Happiness < ApplicationRecord
     select('avg(feeling_like) as feeling, city').group(:city).order("feeling DESC")
   }
 
-  scope :top_happy_countries, -> {
-    group_by(:country)
+  scope :near_happynesses, ->(location, distance) {
+      near(location, distance, order: :distance)
   }
 
-  scope :top_happy_postal_code, -> {
-    group_by(:postal_code)
-  }
-
+  def happy_by_distance distance
+    nearbys(distance).to_a.group_by{|f| f.feeling_like}
+  end
 
 end

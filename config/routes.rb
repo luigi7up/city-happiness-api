@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   #constraints subdomain: 'api' do
     scope module: 'api' do
       namespace :v1 do
-        resources :happinesses, only:[:create]
+        resources :happinesses, only:[:index, :create]
         get '/top-happiest-cities', to:'happinesses#top_happiest_cities', as: 'top_happy_cities'
       end
     end
