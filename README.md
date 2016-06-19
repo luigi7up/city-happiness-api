@@ -14,4 +14,14 @@ All requests towards the APIs endpoints have to contain these headers:
 
 `Content-type: application/json`
 
+## Endpoints
+### Create happiness status
+
+Info: Creates a new status for a user.
+
+**POST /happinesses**
+
+Payload expected:
+`{"device_id":"x123x123","feeling_like":"2","lat":"40.416775","lng":"-3.703790"}`
+
 
