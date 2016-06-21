@@ -21,6 +21,7 @@ module Api::V1
 
     # POST /happinesses
     def create
+
       @happiness = Happiness.new(happiness_params)
 
       if @happiness.save
@@ -46,7 +47,7 @@ module Api::V1
 
     # Only allow a trusted parameter "white list" through.
     def happiness_params
-      params.require(:happinesses).permit(:device_id, :feeling_like, :lat, :lng, :city, :country, :neighborhood, :string)
+      params.permit(:device_id, :feeling_like, :lat, :lng, :city, :country, :neighborhood, :string)
     end
   end
 end
