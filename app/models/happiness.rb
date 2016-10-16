@@ -16,13 +16,16 @@
 #
 
 class Happiness < ApplicationRecord
-
   validates :device_id, :feeling_like, :lat, :lng, presence: true
+  # validate :happiness_set
 
-  validate :happiness_set
+
   def happiness_set
     if Happiness.where(device_id: device_id).where("created_at >= ?", Time.zone.now.beginning_of_day).count > 0
-        errors.add(:base, "Happiness was set already today")
+      errors.add(:base, "Happiness was set already today")
+      # GOOGLE APIs guide
+      errors.add(:message, "Happiness was set already today")
+      errors.add(:code, "ERR_ONLY_ONE_A_DAY")
     end
   end
 

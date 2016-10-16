@@ -4,7 +4,6 @@ module Api::V1
 
     # GET /happinesses
     def index
-
       if params[:location].present?
         @happinesses = Happiness.near_happynesses params[:location], params[:distance] || 15
       else
@@ -21,13 +20,11 @@ module Api::V1
 
     # POST /happinesses
     def create
-
       @happiness = Happiness.new(happiness_params)
-
       if @happiness.save
-        render json: @happiness, status: :created, location: @happiness
+        render json: @happiness, status: :created
       else
-        render json: @happiness.errors, status: :unprocessable_entity
+        render json: { error: @happiness.errors }, :status => 422
       end
     end
 
